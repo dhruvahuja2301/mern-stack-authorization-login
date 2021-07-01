@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BASE_URL from './url';
 
 export const UserContext = React.createContext([]);
 
@@ -16,7 +17,7 @@ function App() {
     const checkRefreshToken = async () => {
       // const result = await (await fetch('https://dhruv-mern-authorization.herokuapp.com/register',{
       // console.log(1);
-      const result = await (await fetch('http://localhost:4000/refresh_token',{
+      const result = await (await fetch(`${BASE_URL}/refresh_token`,{
             method:'POST',
             credentials: 'include',
             headers: {
