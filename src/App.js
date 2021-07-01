@@ -35,7 +35,7 @@ function App() {
   },[]);
 
   const LogoutCallback = async () => {
-    const result = await (await fetch('http://localhost:4000/logout',{
+    const result = await (await fetch(`${BASE_URL}/logout,{
       method:'POST',
       credentials: 'include'
     })).json();
