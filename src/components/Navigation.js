@@ -7,7 +7,7 @@ const Navigation = ({ LogoutCallback }) => {
     return (    
             <nav className="navbar navbar-expand-md navbar-light bg-light">
             <div className="container">
-                <Link className="navbar-brand" to="/">Navigation</Link>
+                <Link className="navbar-brand" to="/">Home</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

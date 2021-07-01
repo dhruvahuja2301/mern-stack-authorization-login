@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { UserContext } from '../App';
-// import Dashboard from './Dashboard';
+import BASE_URL from '../url';
 
 const DashboardProtected = () => {
     
@@ -10,7 +10,7 @@ const DashboardProtected = () => {
     useEffect(() => {
         const fetchProtected = async() => {
             // console.log(user)
-            const result = await (await fetch('http://localhost:4000/protected',{
+            const result = await (await fetch(`${BASE_URL}/protected`,{
                 method:'POST',
                 credentials: 'include',
                 headers: {

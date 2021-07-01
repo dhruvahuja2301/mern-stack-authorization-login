@@ -3,6 +3,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Redirect } from 'react-router-dom';
 import { UserContext } from '../App';
 import { useHistory } from 'react-router';
+import BASE_URL from '../url';
 
 const Login = () => {
     const [user, setUser] = useContext(UserContext);
@@ -22,7 +23,7 @@ const Login = () => {
         e.preventDefault();
         // 2 await because fetch await gives a response which is a promise to be converted to json
         // const result = await (await fetch('https://dhruv-mern-authorization.herokuapp.com/login',{
-        const result = await (await fetch('http://localhost:4000/login',{
+        const result = await (await fetch(`${BASE_URL}/login`,{
             method:'POST',
             credentials: 'include',
             headers: {
